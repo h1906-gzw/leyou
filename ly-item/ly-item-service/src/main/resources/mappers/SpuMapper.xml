@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.leyou.dao.SpuMapper">
     <select id="findSpuByPage" resultType="vo.SpuVo">
-        SELECT s.id,s.title,b.name AS bname,s.saleable,s.brand_id,s.cid1,s.cid2,s.cid3,
+        SELECT s.*,s.sub_title as subTitle,s.brand_id as brandId,s.create_time as createTime,
+                b.name as bname,
              CONCAT_WS('/',(SELECT g1.name FROM tb_category g1 WHERE s.cid1=g1.id),
             (SELECT g2.name FROM tb_category g2 WHERE s.cid2=g2.id),
             (SELECT g3.name FROM tb_category g3 WHERE s.cid3=g3.id)) AS cname

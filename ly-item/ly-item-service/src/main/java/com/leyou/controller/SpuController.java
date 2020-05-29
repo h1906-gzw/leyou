@@ -63,4 +63,6 @@ public class SpuController {
         spuService.upOrDown(spuId,saleable);
     }
 
+
+
 }

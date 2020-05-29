@@ -33,4 +33,18 @@ public class SpecParamService {
     public List<SpecParam> findSpecParamBycid(Long cid) {
         return specParamMapper.findSpecParamBycid(cid);
     }
+
+    /**
+     *根据三级分类id+搜索条件为1的参数查询规格参数集合
+     *
+     * @param cid
+     * @return
+     */
+    public List<SpecParam> findSpecParamBycidAndSearching(Long cid) {
+
+        SpecParam specParam = new SpecParam();
+        specParam.setCid(cid);
+        specParam.setSearching(true);
+        return specParamMapper.select(specParam);
+    }
 }
