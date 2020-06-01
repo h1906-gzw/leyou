@@ -19,7 +19,8 @@ public class SpuController {
     public PageResult<SpuVo> findSpuByPage(@RequestParam("key") String key,
                                            @RequestParam("page") Integer page,
                                            @RequestParam("rows") Integer rows,
-                                           @RequestParam(required = false,value = "saleable") Integer saleable){
+                                           @RequestParam("saleable") Integer saleable){
+        System.out.println("1111111");
         return spuService.findSpuByPage(key,page,rows,saleable);
 
     }

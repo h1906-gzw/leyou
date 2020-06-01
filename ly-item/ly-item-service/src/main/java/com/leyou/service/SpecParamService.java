@@ -40,7 +40,7 @@ public class SpecParamService {
      * @param cid
      * @return
      */
-    public List<SpecParam> findSpecParamBycidAndSearching(Long cid) {
+    public List<SpecParam> findSpecParamByCidAndSearching(Long cid) {
 
         SpecParam specParam = new SpecParam();
         specParam.setCid(cid);

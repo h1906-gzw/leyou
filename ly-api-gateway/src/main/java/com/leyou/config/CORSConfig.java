@@ -13,6 +13,7 @@ public class CORSConfig {
         //配置cors
         CorsConfiguration configuration=new CorsConfiguration();
         configuration.addAllowedOrigin("http://manage.leyou.com");
+        configuration.addAllowedOrigin("http://www.leyou.com");
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("*");
         configuration.setAllowCredentials(true);

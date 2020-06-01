@@ -126,7 +126,7 @@ public class SpuService {
         //第三修改sku
         List<Sku> skus = spuVo.getSkus();
         skus.forEach(s -> {
-            //删除sku
+            //修改sku
             s.setEnable(false);
             skuMapper.updateByPrimaryKey(s);
 

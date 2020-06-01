@@ -10,11 +10,11 @@ import vo.SpuVo;
 @RequestMapping("spu")
 public interface SpuClientService {
 
-    @RequestMapping("page")
+    @RequestMapping("/page")
     public PageResult<SpuVo> findSpuByPage(@RequestParam("key") String key,
                                            @RequestParam("page") Integer page,
                                            @RequestParam("rows") Integer rows,
-                                           @RequestParam(required = false,value = "saleable") Integer saleable);
+                                           @RequestParam("saleable") Integer saleable);
 
     @RequestMapping("detail/{spuId}")
     public SpuDetail findSpuDetailBySpuId(@PathVariable("spuId") Long spuId);
